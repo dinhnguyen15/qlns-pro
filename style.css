@@ -1,0 +1,591 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: rgba(235, 235, 235, 0.893);
+    height: 100%;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Thanh navbar(Tìm kiếm và Thông báo) */
+
+.header__navbar {
+    background-color: white;
+    height: 6rem;
+    width: 84%;
+    right: 0;
+    position: fixed;
+}
+
+.increase-navbar {
+    width: 95%;
+}
+
+.header__navbar-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    margin-left: -3rem;
+}
+
+.header__navbar-item {
+    margin: 0 20px;
+    list-style: none;
+    display: flex;
+    margin-top: 3px;
+}
+
+.search-item-img {
+    align-self: center;
+    font-size: 1.8rem;
+    color: #C2CFE0;
+    margin-right: 1.5rem;
+}
+
+.header_search-input {
+    border: none;
+    padding: 3px;
+    flex: 1;
+    font-size: 1.4rem;
+}
+
+.notify-item {
+    align-self: center;
+}
+.notify-bell {
+    font-size: 2.3rem;
+    margin-right: 1.2rem;
+    color: #C2CFE0;
+}
+.item-circle {
+    font-size: 0.8rem;
+    position: absolute;
+    right: 33px;
+    top: 20px;
+    color: #F7685B;
+}
+.header__notify {
+    position: absolute;
+    margin-top: 4rem;
+    right: 0.5%;
+    width: 32rem;
+    height: 35rem;
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px -3px #5e5e5ec6;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    will-change: opacity, transform;
+    transform-origin: 95% top;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+}
+
+.header__notify::-webkit-scrollbar {
+    width: 4px;
+}
+.header__notify::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+.header__notify::-webkit-scrollbar-thumb {
+    background-color: rgb(37, 142, 255);
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -30px;
+    right: 11px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    width: 90px;
+    height: 30px;
+}
+
+.header__notify-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__notify :hover {
+    background-color: rgba(235, 235, 235, 0.893);
+}
+
+.header__notify-item {
+    padding: 1.3rem;
+    margin-left: -20px;
+    font-size: 1.3rem;
+}
+
+.header__notify-item img {
+    width: 4rem;
+    border-radius: 2rem;
+    margin-left: -20px;
+    margin-right: 10px;
+}
+
+.header__notify-info {
+    color: rgb(31, 31, 34);
+    line-height: 2.1rem;
+    
+}
+
+.header__notify-name {
+    color: black;
+    font-weight: 500;
+}
+.header__notify-desName {
+    color: rgb(105, 114, 120);
+}
+
+.header__notify-time {
+    color: blue;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.has-notify:hover .header__notify {
+    display: block;
+}
+.has-notify:hover .notify-bell {
+    color: #109CF1;
+}
+hr.line {
+    border: 1px solid rgba(209, 209, 209, 0.415);
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Thanh sidebar */
+
+.sidebar-item {
+    text-decoration: none;
+}
+
+.web-total {
+    display: flex;
+}
+
+.main {
+    flex: 1;
+}
+
+.sidebar-list {
+    width: 16%;
+    background-color: white;
+    border-right: 3px solid rgba(203, 203, 203, 0.244);
+    position: fixed;
+    height: 100%;
+}
+
+.logo .tl-sidebar {
+    margin-left: 5%;
+    height: 2.35rem;
+    font-size: 2.2rem;
+    padding-top: 0.5rem;
+    color: #109CF1;
+}
+
+.user_avt {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.avt {
+    width: 4rem;
+    height: 4rem;
+    flex: 0;
+    border-radius: 3rem;
+    justify-content: center;
+    margin-left: 2rem;
+}
+.avt-des {
+    margin-left: 2rem;
+    justify-content: center;
+    line-height: 0.5rem;
+}
+.name-avt {
+    font-size: 1.5rem;
+}
+.email-avt {
+    font-size: 1rem;
+    color: gray;
+}
+
+.sidebar-item {
+    display: flex;
+    margin-left: 2.2rem;
+    font-size: 1.2rem;
+}
+
+.sidebar-item i {
+    align-self: center;
+    margin-right: 2rem;
+    color: #C2CFE0;
+    font-size: 1.6rem;
+}
+
+.tl-item {
+    flex: 1;
+    color: #334D6E;
+}
+
+.item-active i, .item-active .tl-item{
+    color: #109CF1;
+}
+
+.sidebar-item-toggle{
+    margin-top: 224px;
+    cursor: pointer;
+}
+.toggle-tl{
+    color: #90A0B7;
+    cursor: pointer;
+}
+
+.sidebar-item :hover {
+    color: #0388dbc3;
+}
+
+.hide-sidebar .user_avt .avt-des{
+    display: none;
+}
+
+.hide-sidebar .sidebar-item .tl-item {
+    display: none;
+}
+
+.hide-sidebar .user_avt {
+    margin-bottom: 40px;
+    margin-left: -3px;
+}
+
+.hide-toggle .toggle-tl {
+    display: none;
+}
+
+.hide-sidebar .sidebar-item {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 28px;
+}
+
+.hide-toggle .toggle-item {
+    margin-top: 205px !important;
+    color: #109CF1;
+}
+
+.hide-sidebar {
+    width: 5%;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Phần nội dung  */
+
+.container {
+    display: inline-flex;
+    margin-top: 9.6rem;
+    float: right;
+}
+
+.increase-panel {
+    width: 92rem;
+}
+
+.increase-panel .container-menu1 {
+    width: 88.225rem;
+}
+
+.container-menu1 {
+    margin-left: 3.8rem;
+    background-color: white;
+    width: 72rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 15px -8px #5e5e5ec6;
+    height: 100%;
+}
+.container-menu1 img {
+    width: 72rem;
+}
+.task-show-more {
+    color: #109CF1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1rem;
+    z-index: 100;
+    background-color: white;
+    margin-left: 3.8rem;
+}
+
+.show-more {
+    text-decoration: none;
+    display: none;
+}
+.show-more :hover {
+    text-decoration: underline;
+}
+
+.has-showmore .container-menu1 {
+    max-height: 61rem;
+    overflow: hidden;
+}
+
+.has-showmore .show-more {
+    display: block;
+}
+
+.container-menu2 {
+    margin-left: 3.8rem;
+    flex-direction: column;
+    margin-right: 3.8rem;
+}
+
+.menu-listItem1 img {
+    box-shadow: 0px 0px 15px -8px #5e5e5ec6;
+}
+.menu-listItem2 img {
+    box-shadow: 0px 0px 15px -8px #5e5e5ec6;
+    margin-top: 3.8rem;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+/* Phần task con */
+
+.task-item {
+    width: auto;
+    height: 13rem;
+    background-color: white;
+    margin: 2.4rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 15px -8px #5e5e5ec6;
+    
+}
+
+.info-task{
+    display: flex;
+    justify-content: space-between;
+}
+.tl-task h3 {
+    font-size: 1.45rem;
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+}
+.time-task{
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    color: #707683;
+    margin-top: -2rem;
+}
+.time-task h4 {
+    font-weight: 300;
+    color: #a3a3a3;
+    margin-left: 1.6rem;
+    padding-right: 1rem;
+}
+
+.action-task{
+    margin-right: 2rem;
+    margin-top: 1.6rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    color: #90A0B7; 
+}
+.user-task{
+    display: flex;
+    justify-content: space-between;
+}
+.userInfo-task{
+    display: flex;
+    margin-left: 1.6rem;
+}
+.userInfo-task img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    align-self: center;
+    margin-right: 1rem;
+}
+.userInfo-task h3 {
+    font-size: 1.3rem;
+    color: #707683;
+    font-weight: 400;
+}
+.icon-task img {
+    width: 1.2rem;
+}
+.userAction-task {
+    flex-direction: row-reverse;
+    display: inherit;
+    margin-right: 2rem;
+    margin-top: 1.1rem;
+}
+.userAction-task a {
+    padding: .7rem;
+}
+.confirm-task{
+    text-decoration: none;
+    background-color: #C2CFE0;
+    width: 8rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.delete-task{
+    color: #C2CFE0;
+}
+.edit-task{
+    color: #C2CFE0;
+}
+
+.task-ended {
+    background-color: #F7685B;
+}
+.task-complete {
+    background-color: #2ED47A;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/* Phần form table */
+.form-table {
+    display: flex;
+    margin-top: 7.6rem;
+    margin-left: 18%;
+    flex-direction: column;
+    margin-right: 2%;
+}
+
+#form-user {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#form-user td, #form-user th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#form-user tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+#form-user tr:hover {
+    background-color: #ddd;
+}
+  
+#form-user th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0696b396;
+    color: white;
+}
+
+.form-user_name img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
+
+.form-user_name {
+    display: flex;
+    align-items: center;
+}
+
+.form-user_name h3 {
+    font-size: 1.3rem;
+}
+
+.form-table_filter {
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: -4rem;
+}
+
+.dropdown-btn {
+    border: none;
+}
+
+.tl-filter {
+    color: #9a9a9a;
+    align-self: center;
+}
+
+.form-table_add {
+    background-color: #109CF1;
+    border-radius: 0.5rem;
+    width: 15rem;
+}
+
+.form-table_add h5 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.form-table_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.des-form-name {
+    max-width: 50rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+}
