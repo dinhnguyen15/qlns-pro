@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Answer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="./font/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="create-form-body">
+            <div class="create-form-name">
+                <label class="form-name">Đánh giá kết quả đầu ra</label>
+                <label class="form-desc">Đào tạo lập trình cơ bản html css js</label>
+            </div>
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <label class="form-question">Nêu khái niệm cơ bản về ngôn ngữ lập trình html, css, js?
+                        <i class="fas fa-asterisk mark-imper_add"></i>
+                    </label>
+                    <div class="question-select">
+                    </div>
+                </div>
+                <div class="type-question-desc">
+                    <div class="op1 ma-bottom-3">
+                        <input type="text" class="text-desc" placeholder="Văn bản câu trả lời ngắn">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <label class="form-question">Nêu các định nghĩa về thẻ trong html và lấy ví dụ?
+                        <i class="fas fa-asterisk mark-imper_add mark-imper_dis"></i>
+                    </label>
+                    <div class="question-select">
+                    </div>
+                </div>
+                <div class="type-question-desc">
+                    <div class="op2 ma-bottom-3">
+                        <textarea name="" id="" cols="30" rows="10" class="para-desc" placeholder="Văn bản trả lời dài"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <label class="form-question">Chọn đáp án đúng nhất về lệnh thuộc tính trong css?
+                        <i class="fas fa-asterisk mark-imper_add mark-imper_dis"></i>
+                    </label>
+                    <div class="question-select">
+                    </div>
+                </div>
+                <div class="op3 ma-bottom-3">
+                    <div class="answer-op">
+                        <div class="answer-num">
+                            <input type="radio" id="" name="css_language" value="1" class="size-box">
+                            <label class="answer" for="1">color: fff;</label>
+                        </div>
+                        <div class="answer-num">
+                            <input type="radio" id="" name="css_language" value="2" class="size-box">
+                            <label class="answer" for="2">color: #fff</label>
+                        </div>
+                        <div class="answer-num">
+                            <input type="radio" id="" name="css_language" value="3" class="size-box">
+                            <label class="answer" for="3">color: #fff;</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <label class="form-question">Chọn các thẻ là đúng thường dùng trong html?
+                        <i class="fas fa-asterisk mark-imper_add mark-imper_dis"></i>
+                    </label>
+                    <div class="question-select">
+                    </div>
+                </div>
+                <div class="op4 ma-bottom-3">
+                    <div class="answer-op">
+                        <div class="answer-num">
+                            <input type="checkbox" name="" id="" class="size-box">
+                            <label class="answer" for="">div</label>
+                        </div>
+                        <div class="answer-num">
+                            <input type="checkbox" name="" id="" class="size-box">
+                            <label class="answer" for="">hr</label>
+                        </div>
+                        <div class="answer-num">
+                            <input type="checkbox" name="" id="" class="size-box">
+                            <label class="answer" for="">submit</label>
+                        </div>
+                        <div class="answer-num">
+                            <input type="checkbox" name="" id="" class="size-box">
+                            <label class="answer" for="">tfoot</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <label class="form-question">Bạn tự đánh giá năng lực của bản thân thuộc loại nào?
+                        <i class="fas fa-asterisk mark-imper_add"></i>
+                    </label>
+                    <div class="answer-select">
+                        <select class="type-answer">
+                            <option value="0">Chọn:</option>
+                            <option value="1">Giỏi</option>
+                            <option value="2">Khá</option>
+                            <option value="3">Đạt</option>
+                            <option value="4">Chưa đạt</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="op5 ma-bottom-3">
+                    
+                </div>
+            </div>
+
+
+            <a href="#submit">
+                <button class="send-answer b-radius-6">Gửi</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

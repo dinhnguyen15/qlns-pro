@@ -1,0 +1,408 @@
+/* Header tạo form */
+.create-form {
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 15px -8px #5e5e5ec6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-form_tl {
+    font-size: 2.2rem;
+    color: var(--black-color);
+    font-weight: 700;
+    margin-left: 10rem;
+}
+.create-btn {
+    font-size: 1.8rem;
+    margin-right: 10rem;
+    padding: 1rem;
+    color: var(--black-color);
+    background-color: var(--blue-bland-color);
+    border-radius: 1rem;
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* Phần nhập tên biểu mẫu */
+
+.create-form-body {
+    width: 100rem;
+    margin: 3rem auto 0;
+}
+
+.create-form-name {
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 15px -1px #5e5e5ec6;
+    display: flex;
+    flex-direction: column;
+    border-top: 8px solid rgba(18, 101, 218, 0.807);
+    border-left: 5px solid rgba(18, 165, 218, 0.807);
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.393);
+    border-right: 1.5px solid rgba(128, 128, 128, 0.393);
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    height: auto;
+}
+
+.enter-form-name {
+    float: left;
+    padding: 0.6rem 1rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--black-color);
+    border: none;
+    line-height: 2.8rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: #abacad;
+    margin: 1.2rem;
+}
+
+.enter-form-name:focus, 
+.enter-form-name:active {
+    border-color: #109CF1;
+    outline: none;
+}
+
+.enter-form-desc {
+    float: left;
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    border: none;
+    font-weight: 400;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-color: #abacad95;
+    margin: 1.2rem;
+}
+
+.enter-form-desc:focus, 
+.enter-form-desc:active {
+    border-color: var(--black-color);
+    outline: none;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Phần nhập câu hỏi */
+
+.create-form-question {
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 15px -7px #5e5e5ec6;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+    border: 1.5px solid rgba(128, 128, 128, 0.393);
+}
+
+.form-question_top {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+}
+
+.enter-question {
+    font-size: 1.7rem;
+    width: 65rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    border: none;
+    padding: 0.5rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-color: #abacad95;
+    margin: 1.2rem;
+}
+
+.enter-question:focus, 
+.enter-question:active {
+    border-color: var(--black-color);
+    outline: none;
+}
+
+.question-select {
+    font-size: 1.6rem;
+}
+
+.type-question {
+    border: 1px solid rgb(190, 188, 188);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: rgba(235, 235, 235, 0.893);
+}
+
+.type-question:focus,
+.type-question:active {
+    outline: none;
+}
+
+.type-question-desc {
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-desc {
+    padding: 0.5rem;
+    font-size: 1.45rem;
+    width: 90rem;
+    float: left;
+    border: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #abacad95;
+    margin: 1.2rem;
+}
+
+.text-desc:focus,
+.text-desc:active {
+    border-color: var(--black-color);
+    outline: none;
+}
+
+.para-desc {
+    padding: 0.5rem;
+    font-size: 1.45rem;
+    width: 90rem;
+    float: left;
+    border: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-color: #abacad95;
+    margin: 1.2rem;
+}
+.para-desc:focus,
+.para-desc:active {
+    outline: none;
+    border-color: var(--black-color);
+}
+.op3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.45rem;
+}
+
+.multiple-choice-desc {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.choice-desc {
+    margin-left: 1rem;
+    width: 80rem;
+    padding: 0.5rem;
+    border: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-color: #abacad95;
+    margin: 1.2rem;
+}
+.choice-desc:focus,
+.choice-desc:active {
+    outline: none;
+    border-color: var(--black-color);
+}
+
+.size-box {
+    width: 2rem;
+    height: 2rem;
+}
+
+.op4 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.45rem;
+}
+.checkbox-desc {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.op5 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.45rem;
+}
+.dropdown-desc {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.ma-bottom-3 {
+    margin-bottom: 3rem;
+}
+
+.question-add {
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    background-color: rgba(7, 155, 126, 0.999);
+    color: var(--white-color);
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin-left: 3rem;
+}
+
+.b-radius-6 {
+    border-radius: 0.6rem;
+}
+.b-radius-3 {
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border: 2px solid rgba(128, 128, 128, 0.514);
+    background-color: rgba(18, 218, 198, 0.303);
+}
+
+.form-act {
+    margin-right: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: end;
+}
+
+.ques-delete {
+    color: red;
+    font-size: 2rem;
+    margin-right: 3rem;
+}
+
+.act-imper {
+    display: flex;
+    align-items: center;
+    border-left: 2px solid gray;
+    text-decoration: none;
+}
+.ques-toogle {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: #109CF1;
+}
+.ques-toogle_tl {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    color: var(--black-color);
+}
+
+/* --------------------------------------------------------------------------------- */
+
+/* Phần trả lời form  */
+.form-name {
+    float: left;
+    padding: 1.6rem 1.6rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--black-color);
+    border: none;
+    line-height: 3rem;
+}
+
+.form-desc {
+    float: left;
+    padding: 1.6rem 1.6rem;
+    font-size: 1.6rem;
+    border: none;
+    font-weight: 400;
+}
+
+.form-question {
+    font-size: 1.7rem;
+    width: 65rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    padding: 1.5rem;
+}
+
+.send-answer {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+    padding: 1rem 3rem;
+    background-color: rgba(22, 169, 248, 0.999);
+    color: var(--white-color);
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin-left: 3rem;
+}
+
+.answer-op {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+
+.answer {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+.answer-num {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.answer-select {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.type-answer {
+    border: 1px solid rgb(190, 188, 188);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: rgba(235, 235, 235, 0.893);
+}
+
+.mark-imper_add {
+    color: red;
+    font-size: 0.8rem;
+}
+.mark-imper_dis {
+    display: none;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* Phần đáp án kết quả trả lời form */
+
+.wrong-answer {
+    background-color: rgba(255, 0, 0, 0.462);
+    border: 2px solid red;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.correct-answer {
+    background-color: rgba(107, 216, 165, 0.701);
+    border: 2px solid blue;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.exit-form {
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 175, 61, 0.999);
+    color: var(--white-color);
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin-left: 3rem;
+}

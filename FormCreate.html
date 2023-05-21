@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Create</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="./font/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <header class="create-form">
+        <h3 class="create-form_tl">Biểu mẫu tạo Form</h3>
+        <a href="#create-form">
+            <button class="create-btn">Created</button>
+        </a>
+    </header>
+    <div class="container">
+        <div class="create-form-body">
+            <div class="create-form-name">
+                <input type="text" class="enter-form-name" placeholder="Nhập tên biểu mẫu">
+                <input type="text" class="enter-form-desc" placeholder="Mô tả biểu mẫu">
+            </div>
+            <div class="create-form-question">
+                <div class="form-question_top">
+                    <input type="text" class="enter-question" placeholder="Tên câu hỏi">
+                    <div class="question-select">
+                        <select class="type-question">
+                            <option value="1">Trả lời ngắn</option>
+                            <option value="2">Đoạn</option>
+                            <option value="3">Trắc nghiệm</option>
+                            <option value="4">Hộp kiểm</option>
+                            <option value="5">Menu thả xuống</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="type-question-desc">
+                    <div class="op1 ma-bottom-3">
+                        <input type="text" class="text-desc" placeholder="Văn bản câu trả lời ngắn" disabled="disabled">
+                    </div>
+                    <div class="op2 ma-bottom-3">
+                        <textarea name="" id="" cols="30" rows="10" class="para-desc" placeholder="Văn bản trả lời dài" disabled="disabled"></textarea>
+                    </div>
+                    <div class="op3 ma-bottom-3">
+                        <div class="multiple-choice-desc">
+                            <input type="radio" name="" id="" class="size-box" value="" disabled="disabled">
+                            <input type="text" class="choice-desc" placeholder="Tùy chọn 1">
+                        </div>
+                        <a href="#add-op3">
+                            <button class="b-radius-3">Thêm tùy chọn</button>
+                        </a>
+                    </div>
+                    <div class="op4 ma-bottom-3">
+                        <div class="checkbox-desc">
+                            <input type="checkbox" name="" id="" class="size-box" disabled="disabled">
+                            <input type="text" class="choice-desc" placeholder="Tùy chọn 1">
+                        </div>
+                        <a href="#add-op4">
+                            <button  class="b-radius-3">Thêm tùy chọn</button>
+                        </a>
+                    </div>
+                    <div class="op5 ma-bottom-3">
+                        <div class="dropdown-desc">
+                            <label>1.</label>
+                            <input type="text" class="choice-desc" placeholder="Tùy chọn 1">
+                        </div>
+                        <a href="#add-op5">
+                            <button class="b-radius-3">Thêm tùy chọn</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-act">
+                    <a href="#delete-question"><i class="fas fa-trash-alt ques-delete"></i></a>
+                    <a href="#toogle-imper" class="act-imper">
+                        <i class="fas fa-toggle-on ques-toogle"></i>
+                        <label class="ques-toogle_tl">Bắt buộc</label>
+                    </a>
+                </div>
+            </div>
+            <a href="#add-question">
+                <button class="question-add b-radius-6">Thêm câu hỏi</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --blue-bland-color: rgba(11, 155, 233, 0.205);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: rgba(235, 235, 235, 0.893);
+    height: 100%;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+

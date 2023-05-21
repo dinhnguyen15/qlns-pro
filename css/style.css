@@ -32,13 +32,13 @@ html {
 .header__navbar {
     background-color: white;
     height: 6rem;
-    width: 84%;
+    width: calc(100% - 24.6rem);
     right: 0;
     position: fixed;
 }
 
 .increase-navbar {
-    width: 95%;
+    width: calc(100% - 7.7rem);
 }
 
 .header__navbar-list {
@@ -64,9 +64,21 @@ html {
 
 .header_search-input {
     border: none;
-    padding: 3px;
+    padding: 2px 8px;
     flex: 1;
     font-size: 1.4rem;
+    min-width: 256px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-color: #ebeff2;
+}
+
+.header_search-input:focus, 
+.header_search-input:active {
+    border-color: #109CF1;
+    outline: none;
 }
 
 .notify-item {
@@ -96,24 +108,28 @@ html {
     animation: headerNotifyGrowth ease-in 0.25s;
     will-change: opacity, transform;
     transform-origin: 95% top;
-    overflow-x: hidden;
-    overflow-y: auto;
     display: none;
 }
 
-.header__notify::-webkit-scrollbar {
+.container-notify_list {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container-notify_list::-webkit-scrollbar {
     width: 4px;
 }
-.header__notify::-webkit-scrollbar-track {
+.container-notify_list::-webkit-scrollbar-track {
     background-color: darkgrey;
 }
-.header__notify::-webkit-scrollbar-thumb {
+.container-notify_list::-webkit-scrollbar-thumb {
     background-color: rgb(37, 142, 255);
 }
 
 .header__notify::before {
     content: "";
-    border-width: 15px 15px;
+    border-width: 15px 25px;
     border-style: solid;
     border-color: transparent transparent white transparent;
     position: absolute;
@@ -129,6 +145,7 @@ html {
     top: -30px;
     width: 90px;
     height: 30px;
+    /* background-color: red; */
 }
 
 .header__notify-list {
@@ -138,7 +155,7 @@ html {
     align-items: center;
 }
 
-.header__notify :hover {
+.container-notify_list :hover {
     background-color: rgba(235, 235, 235, 0.893);
 }
 
@@ -210,7 +227,7 @@ hr.line {
 }
 
 .sidebar-list {
-    width: 16%;
+    width: 24.6rem;
     background-color: white;
     border-right: 3px solid rgba(203, 203, 203, 0.244);
     position: fixed;
@@ -256,6 +273,7 @@ hr.line {
     display: flex;
     margin-left: 2.2rem;
     font-size: 1.2rem;
+    color: #2ED47A;
 }
 
 .sidebar-item i {
@@ -267,6 +285,7 @@ hr.line {
 
 .tl-item {
     flex: 1;
+    color: inherit;
     color: #334D6E;
 }
 
@@ -283,7 +302,8 @@ hr.line {
     cursor: pointer;
 }
 
-.sidebar-item :hover {
+.sidebar-item:hover i,
+.sidebar-item:hover h3{
     color: #0388dbc3;
 }
 
@@ -316,7 +336,7 @@ hr.line {
 }
 
 .hide-sidebar {
-    width: 5%;
+    width: 7.7rem;
 }
 
 
@@ -325,7 +345,8 @@ hr.line {
 /* Phần nội dung  */
 
 .container {
-    display: inline-flex;
+    /* display: inline-flex; */
+    display: none; /*ẩn nội dung dardboard để hiện form table */
     margin-top: 9.6rem;
     float: right;
 }
@@ -498,15 +519,19 @@ hr.line {
 .form-table {
     display: flex;
     margin-top: 7.6rem;
-    margin-left: 18%;
+    margin-left: 27.6rem;
     flex-direction: column;
-    margin-right: 2%;
+    margin-right: 3rem;
+}
+
+.increase-table {
+    margin-left: 10.7rem;
 }
 
 #form-user {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    font-size: 1.2rem
 }
   
 #form-user td, #form-user th {
@@ -525,7 +550,7 @@ hr.line {
 #form-user th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
+    text-align: center;
     background-color: #0696b396;
     color: white;
 }
@@ -581,11 +606,37 @@ hr.line {
 }
 
 .des-form-name {
-    max-width: 50rem;
+    display: -webkit-box;
+    line-height: 2rem;
+    max-height: 6rem;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    word-wrap: break-word;
+}
+.a {
+    max-width: 20rem;
+    max-height: 6rem;
+}
+.increase-table .a {
+    max-width: 30rem;
+}
+#check-box_item {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1.7rem;  
+}
+
+.form-user_act {
+    width: 12rem;
+    text-align: center;
+}
+.edit-item {
+    font-size: 1.5rem;
+    color: blue;
+    margin-right: 1rem;
+}
+.delete-item {
+    font-size: 1.5rem;
+    color: red;
 }

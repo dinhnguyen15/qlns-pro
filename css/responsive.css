@@ -1,0 +1,42 @@
+@media only screen and (max-width: 1200px) {
+    .header__navbar {
+        width: calc(100% - 7.7rem);
+    }
+    .form-table {
+        margin-left: 10.7rem;
+    }
+    .form-table .a {
+        max-width: 30rem;
+    }
+    .sidebar-list .user_avt .avt-des{
+        display: none;
+    }
+    
+    .sidebar-list .sidebar-item .tl-item {
+        display: none;
+    }
+    
+    .sidebar-list .user_avt {
+        margin-bottom: 40px;
+        margin-left: -3px;
+    }
+    
+    .sidebar-item-toggle .toggle-tl {
+        display: none;
+    }
+    
+    .sidebar-list .sidebar-item {
+        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-left: 28px;
+    }
+    
+    .sidebar-item-toggle .toggle-item {
+        margin-top: 205px !important;
+        color: #109CF1;
+    }
+    
+    .sidebar-list {
+        width: 7.7rem;
+    }
+}
